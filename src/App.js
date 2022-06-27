@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Dashboard from "./components/dashboard/dashboard";
+import AddCategoryForm from "./components/forms/addCategoryForm";
+import Menu from "./components/menu";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <ToastContainer />
+      <Routes>
+        <Route path="/" element={<Menu />} />
+        {/* <Route path="/category/:id" element={<AddCategoryForm />} /> */}
+        <Route path="/dashboard/*" element={<Dashboard />} />
+      </Routes>
+    </React.Fragment>
   );
 }
 

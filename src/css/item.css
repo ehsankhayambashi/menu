@@ -1,0 +1,26 @@
+.item-img {
+  object-fit: cover;
+}
+
+.card-size {
+  max-height: 130px;
+  min-height: 130px;
+}
+.col-img-size {
+  min-width: 130px !important;
+  max-width: 130px !important;
+}
+.p-style {
+  margin-right: 5px;
+}
+
+.border {
+  border-radius: 20px !important;
+}
+
+.price-color {
+  color: #ff5403;
+}
+.material-color {
+  color: #686868;
+}
